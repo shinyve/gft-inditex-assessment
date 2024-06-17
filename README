@@ -1,0 +1,15 @@
+
+Considerations:
+- The format of the date to receive and return is "yyyy-MM-dd-HH:mm:ss", as the document is shown "2020-06-14-00.00.00".
+- The entry params are mandatory for the endpoint
+- JDK 17
+
+Notes:
+- There are better ways to handle exceptions and error responses. To improve the current development, it's possible to
+add a Exception Handler to return specific errors for each of them.
+- The GetPriceByDateProductAndBrandTest is an integration test where the required petitions are tested using Parameterized test.
+- It's possible to get the specific price from database sorting by priority and returning only 1 element, but I considered
+that logic as a business decision and included it in the use case.
+- I didn't include the brand in the domain because in this example is not need to show the name of it.
+- It's possible to group the structure in domain directories, but as only Prices are handled, I didn't want to add redundancy
+- OpenAPI is configured, {host}/swagger-ui/index.html
